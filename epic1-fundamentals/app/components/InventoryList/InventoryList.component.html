@@ -1,0 +1,13 @@
+<div>This is your ultimate Fruit Basket</div>
+<div>Fruits: {{context}}</div>
+<div *ngFor="let item of getItems()" (click)="setCurrentItem(item)">
+    <span>Name: {{item.name}}</span>&nbsp;&nbsp;<span>Price: {{item.price}}</span>
+</div>
+<div>
+    <p>Guid: {{currentItem.guid}}</p>
+    <p>Name: {{currentItem.name}}</p>
+    <p>Price: {{currentItem.price}}</p>
+</div>
+<table *ngIf="currentItemExists">
+    <tr><td>Current Name:</td><td>{{currentItem.name}}</td></tr>
+</table>
